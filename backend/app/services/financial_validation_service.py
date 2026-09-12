@@ -308,6 +308,10 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
     # Simpler / more commonly-populated P&L reconciliation using the
     # minimum required fields, run alongside the bank-style checks above
     # so the check set degrades gracefully for a standard commercial P&L.
+    # Always append (as NOT_APPLICABLE when inputs are missing) for
+    # consistency with the bank-style checks above — a check silently
+    # disappearing vs. showing NOT_APPLICABLE would be confusing given
+    # some of these fields (e.g. net_profit) may still be present.
     revenue = _field_value(d, "revenue")
     cogs = _field_value(d, "cost_of_sales")
     gross_profit = _field_value(d, "gross_profit")
@@ -318,6 +322,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"revenue": revenue, "cost_of_sales": cogs},
             round(revenue - cogs, 2), gross_profit, period,
         ))
+    else:
+        checks.append(_make_check("gross_profit_check", "revenue - cost_of_sales ≈ gross_profit", {}, None, None, period))
 
     operating_expenses_std = _field_value(d, "operating_expenses")
     operating_profit = _field_value(d, "operating_profit")
@@ -328,6 +334,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"gross_profit": gross_profit, "operating_expenses": operating_expenses_std},
             round(gross_profit - operating_expenses_std, 2), operating_profit, period,
         ))
+    else:
+        checks.append(_make_check("operating_profit_check", "gross_profit - operating_expenses ≈ operating_profit", {}, None, None, period))
 
     tax = _field_value(d, "tax")
     net_profit = _field_value(d, "net_profit")
@@ -338,6 +346,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"operating_profit": operating_profit, "tax": tax},
             round(operating_profit - tax, 2), net_profit, period,
         ))
+    else:
+        checks.append(_make_check("net_profit_check", "operating_profit - tax ≈ net_profit", {}, None, None, period))
 
     net_profit_before_minority = _field_value(d, "consolidated_net_profit_before_minority_interest")
     if total_income is not None and total_expenditure is not None and net_profit_before_minority is not None:
@@ -347,6 +357,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"total_income": total_income, "total_expenditure": total_expenditure},
             round(total_income - total_expenditure, 2), net_profit_before_minority, period,
         ))
+    else:
+        checks.append(_make_check("net_profit_before_minority_check", "total_income - total_expenditure ≈ consolidated_net_profit_before_minority_interest", {}, None, None, period))
 
     minority_interest = _field_value(d, "minority_interest")
     net_profit_group = _field_value(d, "consolidated_net_profit_attributable_to_group")
@@ -357,6 +369,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"consolidated_net_profit_before_minority_interest": net_profit_before_minority, "minority_interest": minority_interest},
             round(net_profit_before_minority - minority_interest, 2), net_profit_group, period,
         ))
+    else:
+        checks.append(_make_check("net_profit_attributable_to_group_check", "consolidated_net_profit_before_minority_interest - minority_interest ≈ consolidated_net_profit_attributable_to_group", {}, None, None, period))
 
     current_profit = _field_value(d, "current_profit")
     brought_forward = _field_value(d, "brought_forward_profit")
@@ -368,6 +382,8 @@ def _validate_profit_and_loss(d: dict, period: str) -> list[dict]:
             {"current_profit": current_profit, "brought_forward_profit": brought_forward},
             round(current_profit + brought_forward, 2), total_available, period,
         ))
+    else:
+        checks.append(_make_check("appropriation_check", "current_profit + brought_forward_profit ≈ total_available_for_appropriation", {}, None, None, period))
 
     return checks
 
