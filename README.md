@@ -4,14 +4,14 @@ AI-powered document extraction, validation, and API platform for financial
 documents (invoices, balance sheets, profit & loss statements, and cash flow
 statements) — built as an AI Engineer Internship technical case study.
 
-> ### ⚠️ Fill these in before submitting — nothing below works without them
-> - **Public GitHub repo:** `<ADD LINK>`
-> - **Live frontend URL:** `<ADD RENDER URL>`
-> - **Live backend API URL:** `<ADD RENDER URL>` (same host as frontend in this setup)
-> - **Swagger/OpenAPI URL:** `<RENDER URL>/docs`
+> ### Submission links
+> - **Public GitHub repo:** `https://github.com/KanagaThara08/document-intelligence-platform`
+> - **Live frontend URL:** `https://document-intelligence-platform-vc6d.onrender.com`
+> - **Live backend API URL:** `https://document-intelligence-platform-vc6d.onrender.com` (same host as frontend in this setup)
+> - **Swagger/OpenAPI URL:** `https://document-intelligence-platform-vc6d.onrender.com/docs`
 
-**Live demo:** `<ADD YOUR RENDER URL HERE AFTER DEPLOYING>`
-**API docs (Swagger):** `<RENDER_URL>/docs`
+**Live demo:** `https://document-intelligence-platform-vc6d.onrender.com`
+**API docs (Swagger):** `https://document-intelligence-platform-vc6d.onrender.com/docs`
 
 ---
 
