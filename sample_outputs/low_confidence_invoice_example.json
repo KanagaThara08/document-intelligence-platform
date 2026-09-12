@@ -1,0 +1,154 @@
+{
+  "document_name": "X51005361895_low_confidence_demo.jpg",
+  "document_type": "invoice",
+  "processing_status": "PASS",
+  "overall_confidence": 0.7758,
+  "file_validation": {
+    "file_type": "image/jpeg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "invoice_number": {
+      "value": null,
+      "page_number": 1,
+      "source_text": null,
+      "confidence": null
+    },
+    "invoice_date": {
+      "value": "2018-01-25",
+      "page_number": 1,
+      "source_text": "25/01/2018 1:22:56PM",
+      "confidence": 0.7758
+    },
+    "vendor_name": {
+      "value": "FUY MINI MARKET",
+      "page_number": 1,
+      "source_text": "Thank you for shopping at FUY! MINI MARKET",
+      "confidence": 0.7758
+    },
+    "customer_name": {
+      "value": null,
+      "page_number": 1,
+      "source_text": null,
+      "confidence": null
+    },
+    "currency": {
+      "value": "MYR",
+      "page_number": 1,
+      "source_text": null,
+      "confidence": 0.7758
+    },
+    "subtotal": {
+      "value": 8.49,
+      "page_number": 1,
+      "source_text": "1 KOTAK 8.49 8.49 9.00 SR",
+      "confidence": 0.7758
+    },
+    "tax_amount": {
+      "value": 0.51,
+      "page_number": 1,
+      "source_text": "GST6%+ 0.51",
+      "confidence": 0.7758
+    },
+    "discount": {
+      "value": 0.0,
+      "page_number": 1,
+      "source_text": null,
+      "confidence": 0.7758
+    },
+    "total_amount": {
+      "value": 9.0,
+      "page_number": 1,
+      "source_text": "Total Includes GST 6% 9.00",
+      "confidence": 0.7758
+    },
+    "cash_paid": {
+      "value": 50.0,
+      "page_number": 1,
+      "source_text": "Cash 50.00",
+      "confidence": 0.7758
+    },
+    "change": {
+      "value": 41.0,
+      "page_number": 1,
+      "source_text": "Change 41.00",
+      "confidence": 0.7758
+    },
+    "line_items": [
+      {
+        "description": "SUMMER CUP 48X230ML",
+        "quantity": 1,
+        "unit_price": 8.49,
+        "amount": 8.49
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": {
+          "subtotal": 8.49,
+          "tax_amount": 0.51,
+          "discount": 0.0
+        },
+        "calculated_value": 9.0,
+        "reported_value": 9.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "line_item_check::SUMMER CUP 48X230ML",
+        "formula": "quantity * unit_price ≈ amount",
+        "operands": {
+          "quantity": 1.0,
+          "unit_price": 8.49
+        },
+        "calculated_value": 8.49,
+        "reported_value": 8.49,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "line_items_sum_to_subtotal",
+        "formula": "sum(line_items.amount) ≈ subtotal",
+        "operands": {
+          "line_item_count": 1
+        },
+        "calculated_value": 8.49,
+        "reported_value": 8.49,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "cash_change_check",
+        "formula": "cash_paid - total_amount ≈ change",
+        "operands": {
+          "cash_paid": 50.0,
+          "total_amount": 9.0
+        },
+        "calculated_value": 41.0,
+        "reported_value": 41.0,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-11T03:10:00Z",
+    "processing_time_ms": 4210,
+    "llm_model": "gemini-3.6-flash"
+  },
+  "_demo_note": "Same real receipt as invoice_pass_example.json, included separately to satisfy the low-confidence demonstration scenario. overall_confidence (0.7758) is the real average Tesseract word-confidence measured on this photographed thermal receipt (78 percent), notably lower than the 90-95 percent typically measured on the clean scanned bank statements in this dataset -- see README section 9."
+}

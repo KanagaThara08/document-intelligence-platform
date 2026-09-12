@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Result — Document Intelligence Platform</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="3" width="16" height="18" rx="1" stroke="#B8874B" stroke-width="1.4"/>
+          <line x1="7.5" y1="8" x2="16.5" y2="8" stroke="#B8874B" stroke-width="1.2"/>
+          <line x1="7.5" y1="12" x2="16.5" y2="12" stroke="#B8874B" stroke-width="1.2"/>
+          <line x1="7.5" y1="16" x2="13" y2="16" stroke="#B8874B" stroke-width="1.2"/>
+        </svg>
+      </span>
+      <div>
+        <h1>Document Result</h1>
+        <span class="tagline">Extracted fields, evidence &amp; financial validation</span>
+      </div>
+    </div>
+    <a class="docs-link" href="/docs" target="_blank">API Docs (Swagger) →</a>
+  </header>
+
+  <main>
+    <a class="back-link" href="/">&larr; Back to dashboard</a>
+    <div id="content">
+      <p class="muted">Loading…</p>
+    </div>
+  </main>
+
+  <script>
+    const DOCUMENT_NAME = {{ document_name | tojson }};
+  </script>
+  <script src="/static/js/result.js"></script>
+</body>
+</html>

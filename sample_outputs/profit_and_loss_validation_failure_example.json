@@ -1,0 +1,290 @@
+{
+  "document_name": "Consolidated Profit & Loss 2024.pdf",
+  "document_type": "profit_and_loss",
+  "processing_status": "FAILED",
+  "overall_confidence": 0.9,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "period": {
+      "value": "Year ended March 31, 2024",
+      "page_number": 1,
+      "source_text": "For the year ended March 31, 2024",
+      "confidence": 0.9
+    },
+    "currency": {
+      "value": "INR crore",
+      "page_number": 1,
+      "source_text": "₹ in crore",
+      "confidence": 0.9
+    },
+    "interest_earned": {
+      "value": 283649.02,
+      "page_number": 1,
+      "source_text": "Interest earned 283,649.02",
+      "confidence": 0.9
+    },
+    "other_income": {
+      "value": 124345.75,
+      "page_number": 1,
+      "source_text": "Other income 124,345.75",
+      "confidence": 0.9
+    },
+    "total_income": {
+      "value": 407994.77,
+      "page_number": 1,
+      "source_text": "Total 407,994.77",
+      "confidence": 0.9
+    },
+    "interest_expended": {
+      "value": 154138.55,
+      "page_number": 1,
+      "source_text": "Interest expended 154,138.55",
+      "confidence": 0.9
+    },
+    "operating_expenses": {
+      "value": 152269.34,
+      "page_number": 1,
+      "source_text": "Operating expenses 152,269.34",
+      "confidence": 0.9
+    },
+    "provisions_and_contingencies": {
+      "value": 36140.38,
+      "page_number": 1,
+      "source_text": "Provisions and contingencies 36,140.38",
+      "confidence": 0.9
+    },
+    "total_expenditure": {
+      "value": 342548.27,
+      "page_number": 1,
+      "source_text": "Total 342,548.27",
+      "confidence": 0.9
+    },
+    "consolidated_net_profit_before_minority_interest": {
+      "value": 65446.5,
+      "page_number": 1,
+      "source_text": "Consolidated Net Profit before minorities' interest 65,446.50",
+      "confidence": 0.9
+    },
+    "minority_interest": {
+      "value": 1384.46,
+      "page_number": 1,
+      "source_text": "Less: Minority Interest 1,384.46",
+      "confidence": 0.9
+    },
+    "consolidated_net_profit_attributable_to_group": {
+      "value": 64062.04,
+      "page_number": 1,
+      "source_text": "Consolidated Net Profit attributable to the group 64,062.04",
+      "confidence": 0.9
+    },
+    "current_profit": {
+      "value": 64062.04,
+      "page_number": 1,
+      "source_text": "Consolidated Net Profit attributable to the group 64,062.04",
+      "confidence": 0.9
+    },
+    "brought_forward_profit": {
+      "value": 120369.35,
+      "page_number": 1,
+      "source_text": "Brought forward consolidated profit 120,369.35",
+      "confidence": 0.9
+    },
+    "addition_on_amalgamation": {
+      "value": 3570.1,
+      "page_number": 1,
+      "source_text": "Addition on amalgamation 3,570.10",
+      "confidence": 0.9
+    },
+    "total_available_for_appropriation": {
+      "value": 188001.49,
+      "page_number": 1,
+      "source_text": "Total 188,001.49",
+      "confidence": 0.9
+    },
+    "basic_eps": {
+      "value": 90.42,
+      "page_number": 1,
+      "source_text": "Basic 90.42",
+      "confidence": 0.9
+    },
+    "diluted_eps": {
+      "value": 90.01,
+      "page_number": 1,
+      "source_text": "Diluted 90.01",
+      "confidence": 0.9
+    },
+    "comparative_periods": [
+      {
+        "period_label": "Year ended March 31, 2023",
+        "data": {
+          "interest_earned": 170754.05,
+          "other_income": 33912.05,
+          "total_income": 204666.1,
+          "interest_expended": 77779.94,
+          "operating_expenses": 51533.69,
+          "provisions_and_contingencies": 29203.77,
+          "total_expenditure": 158517.4,
+          "consolidated_net_profit_before_minority_interest": 46148.7,
+          "minority_interest": 151.59,
+          "consolidated_net_profit_attributable_to_group": 45997.11,
+          "current_profit": 45997.11,
+          "brought_forward_profit": 99062.77,
+          "total_available_for_appropriation": 145059.88
+        }
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "total_income_check",
+        "formula": "interest_earned + other_income ≈ total_income",
+        "operands": {
+          "interest_earned": 283649.02,
+          "other_income": 124345.75
+        },
+        "calculated_value": 407994.77,
+        "reported_value": 407994.77,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "total_expenditure_check",
+        "formula": "interest_expended + operating_expenses + provisions_and_contingencies ≈ total_expenditure",
+        "operands": {
+          "interest_expended": 154138.55,
+          "operating_expenses": 152269.34,
+          "provisions_and_contingencies": 36140.38
+        },
+        "calculated_value": 342548.27,
+        "reported_value": 342548.27,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "net_profit_before_minority_check",
+        "formula": "total_income - total_expenditure ≈ consolidated_net_profit_before_minority_interest",
+        "operands": {
+          "total_income": 407994.77,
+          "total_expenditure": 342548.27
+        },
+        "calculated_value": 65446.5,
+        "reported_value": 65446.5,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "net_profit_attributable_to_group_check",
+        "formula": "consolidated_net_profit_before_minority_interest - minority_interest ≈ consolidated_net_profit_attributable_to_group",
+        "operands": {
+          "consolidated_net_profit_before_minority_interest": 65446.5,
+          "minority_interest": 1384.46
+        },
+        "calculated_value": 64062.04,
+        "reported_value": 64062.04,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "appropriation_check",
+        "formula": "current_profit + brought_forward_profit ≈ total_available_for_appropriation",
+        "operands": {
+          "current_profit": 64062.04,
+          "brought_forward_profit": 120369.35
+        },
+        "calculated_value": 184431.39,
+        "reported_value": 188001.49,
+        "variance": -3570.1,
+        "status": "FAIL",
+        "period": "current"
+      },
+      {
+        "name": "total_income_check",
+        "formula": "interest_earned + other_income ≈ total_income",
+        "operands": {
+          "interest_earned": 170754.05,
+          "other_income": 33912.05
+        },
+        "calculated_value": 204666.1,
+        "reported_value": 204666.1,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      },
+      {
+        "name": "total_expenditure_check",
+        "formula": "interest_expended + operating_expenses + provisions_and_contingencies ≈ total_expenditure",
+        "operands": {
+          "interest_expended": 77779.94,
+          "operating_expenses": 51533.69,
+          "provisions_and_contingencies": 29203.77
+        },
+        "calculated_value": 158517.4,
+        "reported_value": 158517.4,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      },
+      {
+        "name": "net_profit_before_minority_check",
+        "formula": "total_income - total_expenditure ≈ consolidated_net_profit_before_minority_interest",
+        "operands": {
+          "total_income": 204666.1,
+          "total_expenditure": 158517.4
+        },
+        "calculated_value": 46148.7,
+        "reported_value": 46148.7,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      },
+      {
+        "name": "net_profit_attributable_to_group_check",
+        "formula": "consolidated_net_profit_before_minority_interest - minority_interest ≈ consolidated_net_profit_attributable_to_group",
+        "operands": {
+          "consolidated_net_profit_before_minority_interest": 46148.7,
+          "minority_interest": 151.59
+        },
+        "calculated_value": 45997.11,
+        "reported_value": 45997.11,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      },
+      {
+        "name": "appropriation_check",
+        "formula": "current_profit + brought_forward_profit ≈ total_available_for_appropriation",
+        "operands": {
+          "current_profit": 45997.11,
+          "brought_forward_profit": 99062.77
+        },
+        "calculated_value": 145059.88,
+        "reported_value": 145059.88,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      }
+    ],
+    "overall_status": "FAIL",
+    "issues": [
+      "appropriation_check (current)"
+    ]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-11T03:16:00Z",
+    "processing_time_ms": 5980,
+    "llm_model": "gemini-3.6-flash"
+  },
+  "note": "Genuine FAIL for the CURRENT period only: the 2024 appropriation total legitimately includes an 'addition_on_amalgamation' line (₹3,570.10 crore) outside the minimum-required schema's appropriation formula. The 2023 comparative period (no amalgamation that year) reconciles exactly, demonstrating the required 'validate each period independently' behavior: the SAME check genuinely passes for one period and fails for another on the same document. See README section 7."
+}

@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: document-intelligence-platform
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.6-flash
+      - key: DATABASE_URL
+        value: sqlite:///./app/data/documents.db
+      - key: OCR_BACKEND
+        value: tesseract
+      - key: MAX_PAGES
+        value: "3"
+      - key: MAX_FILE_SIZE_MB
+        value: "15"
+      - key: VALIDATION_TOLERANCE
+        value: "1.0"
+      - key: LOG_LEVEL
+        value: INFO

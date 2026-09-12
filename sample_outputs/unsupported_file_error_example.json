@@ -1,0 +1,18 @@
+{
+  "document_name": "scanned_receipts_archive.zip",
+  "document_type": "invoice",
+  "processing_status": "FAILED",
+  "file_validation": {
+    "file_type": "application/zip",
+    "is_supported": false,
+    "is_readable": false,
+    "page_count": null,
+    "status": "FAILED",
+    "reason": "Only PDF / JPG / PNG documents are supported."
+  },
+  "error": {
+    "code": "UNSUPPORTED_FILE_TYPE",
+    "message": "Only PDF / JPG / PNG documents are supported."
+  },
+  "processing_metadata": {}
+}

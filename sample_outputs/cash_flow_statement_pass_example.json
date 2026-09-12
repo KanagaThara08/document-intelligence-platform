@@ -1,0 +1,160 @@
+{
+  "document_name": "Consolidated Cash Flow Statement 2024.pdf",
+  "document_type": "cash_flow_statement",
+  "processing_status": "PASS",
+  "overall_confidence": 0.9,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 2,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "period": {
+      "value": "Year ended March 31, 2024",
+      "page_number": 1,
+      "source_text": "For the year ended March 31, 2024",
+      "confidence": 0.9
+    },
+    "currency": {
+      "value": "INR crore",
+      "page_number": 1,
+      "source_text": "₹ in crore",
+      "confidence": 0.9
+    },
+    "operating_cash_flow": {
+      "value": 19069.34,
+      "page_number": 1,
+      "source_text": "Net cash flows from operating activities 19,069.34",
+      "confidence": 0.9
+    },
+    "investing_cash_flow": {
+      "value": 5313.77,
+      "page_number": 1,
+      "source_text": "Net cash flow from investing activities 5,313.77",
+      "confidence": 0.9
+    },
+    "financing_cash_flow": {
+      "value": -3983.06,
+      "page_number": 2,
+      "source_text": "Net cash flow (used) financing activities (3,983.06)",
+      "confidence": 0.9
+    },
+    "fx_translation_adjustment": {
+      "value": 104.94,
+      "page_number": 2,
+      "source_text": "Effect of fluctuation in foreign currency translation reserve 104.94",
+      "confidence": 0.9
+    },
+    "net_change_in_cash": {
+      "value": 20504.99,
+      "page_number": 2,
+      "source_text": "Net increase in cash and cash equivalents 20,504.99",
+      "confidence": 0.9
+    },
+    "opening_cash": {
+      "value": 197147.81,
+      "page_number": 2,
+      "source_text": "Cash and cash equivalents at the beginning of the year 197,147.81",
+      "confidence": 0.9
+    },
+    "cash_acquired_on_amalgamation": {
+      "value": 11181.71,
+      "page_number": 2,
+      "source_text": "Cash and cash equivalents acquired on amalgamation 11,181.71",
+      "confidence": 0.9
+    },
+    "closing_cash": {
+      "value": 228834.51,
+      "page_number": 2,
+      "source_text": "Cash and cash equivalents at the end of the year 228,834.51",
+      "confidence": 0.9
+    },
+    "comparative_periods": [
+      {
+        "period_label": "Year ended March 31, 2023",
+        "data": {
+          "operating_cash_flow": 20813.7,
+          "investing_cash_flow": -3423.89,
+          "financing_cash_flow": 23940.56,
+          "fx_translation_adjustment": 431.71,
+          "net_change_in_cash": 41762.08,
+          "opening_cash": 155385.73,
+          "cash_acquired_on_amalgamation": 0,
+          "closing_cash": 197147.81
+        }
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "net_change_in_cash_check",
+        "formula": "operating_cash_flow + investing_cash_flow + financing_cash_flow + fx_translation_adjustment ≈ net_change_in_cash",
+        "operands": {
+          "operating_cash_flow": 19069.34,
+          "investing_cash_flow": 5313.77,
+          "financing_cash_flow": -3983.06,
+          "fx_translation_adjustment": 104.94
+        },
+        "calculated_value": 20504.99,
+        "reported_value": 20504.99,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "closing_cash_check",
+        "formula": "opening_cash + net_change_in_cash + cash_acquired_on_amalgamation ≈ closing_cash",
+        "operands": {
+          "opening_cash": 197147.81,
+          "net_change_in_cash": 20504.99,
+          "cash_acquired_on_amalgamation": 11181.71
+        },
+        "calculated_value": 228834.51,
+        "reported_value": 228834.51,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "net_change_in_cash_check",
+        "formula": "operating_cash_flow + investing_cash_flow + financing_cash_flow + fx_translation_adjustment ≈ net_change_in_cash",
+        "operands": {
+          "operating_cash_flow": 20813.7,
+          "investing_cash_flow": -3423.89,
+          "financing_cash_flow": 23940.56,
+          "fx_translation_adjustment": 431.71
+        },
+        "calculated_value": 41762.08,
+        "reported_value": 41762.08,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      },
+      {
+        "name": "closing_cash_check",
+        "formula": "opening_cash + net_change_in_cash + cash_acquired_on_amalgamation ≈ closing_cash",
+        "operands": {
+          "opening_cash": 155385.73,
+          "net_change_in_cash": 41762.08,
+          "cash_acquired_on_amalgamation": 0.0
+        },
+        "calculated_value": 197147.81,
+        "reported_value": 197147.81,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "Year ended March 31, 2023"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-11T03:14:00Z",
+    "processing_time_ms": 6710,
+    "llm_model": "gemini-3.6-flash"
+  }
+}

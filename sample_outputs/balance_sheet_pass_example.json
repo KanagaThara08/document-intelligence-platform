@@ -1,0 +1,351 @@
+{
+  "document_name": "Consolidated Balance Sheet 2024.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "overall_confidence": 0.9249,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "statement_date": {
+      "value": "2024-03-31",
+      "page_number": 1,
+      "source_text": "As at March 31, 2024",
+      "confidence": 0.9249
+    },
+    "currency": {
+      "value": "INR crore",
+      "page_number": 1,
+      "source_text": "₹ in crore",
+      "confidence": 0.9249
+    },
+    "capital": {
+      "value": 759.69,
+      "page_number": 1,
+      "source_text": "Capital 1 759.69 557.97",
+      "confidence": 0.9249
+    },
+    "employees_stock_options_outstanding": {
+      "value": 2652.72,
+      "page_number": 1,
+      "source_text": "Employees stock options outstanding 2,652.72",
+      "confidence": 0.9249
+    },
+    "reserves_and_surplus": {
+      "value": 452982.84,
+      "page_number": 1,
+      "source_text": "Reserves and surplus 452,982.84",
+      "confidence": 0.9249
+    },
+    "minority_interest": {
+      "value": 13383.4,
+      "page_number": 1,
+      "source_text": "Minority interest 13,383.40",
+      "confidence": 0.9249
+    },
+    "deposits": {
+      "value": 2376887.28,
+      "page_number": 1,
+      "source_text": "Deposits 2,376,887.28",
+      "confidence": 0.9249
+    },
+    "borrowings": {
+      "value": 730615.46,
+      "page_number": 1,
+      "source_text": "Borrowings 730,615.46",
+      "confidence": 0.9249
+    },
+    "other_liabilities_and_provisions": {
+      "value": 174832.07,
+      "page_number": 1,
+      "source_text": "Other liabilities and provisions 174,832.07",
+      "confidence": 0.9249
+    },
+    "policyholders_funds": {
+      "value": 278080.8,
+      "page_number": 1,
+      "source_text": "Policyholders' funds 278,080.80",
+      "confidence": 0.9249
+    },
+    "total_equity": {
+      "value": 469778.65,
+      "page_number": 1,
+      "source_text": "derived: capital + ESOP + reserves + minority interest",
+      "confidence": 0.9249
+    },
+    "total_liabilities": {
+      "value": 3560415.61,
+      "page_number": 1,
+      "source_text": "derived: deposits + borrowings + other liabilities + policyholders' funds",
+      "confidence": 0.9249
+    },
+    "cash_and_balances_with_rbi": {
+      "value": 178718.67,
+      "page_number": 1,
+      "source_text": "Cash and balances with RBI 178,718.67",
+      "confidence": 0.9249
+    },
+    "balances_with_banks_and_money_at_call": {
+      "value": 50115.84,
+      "page_number": 1,
+      "source_text": "Balances with banks and money at call 50,115.84",
+      "confidence": 0.9249
+    },
+    "investments": {
+      "value": 1005681.63,
+      "page_number": 1,
+      "source_text": "Investments 1,005,681.63",
+      "confidence": 0.9249
+    },
+    "advances": {
+      "value": 2565891.41,
+      "page_number": 1,
+      "source_text": "Advances 2,565,891.41",
+      "confidence": 0.9249
+    },
+    "fixed_assets": {
+      "value": 12603.76,
+      "page_number": 1,
+      "source_text": "Fixed assets 12,603.76",
+      "confidence": 0.9249
+    },
+    "other_assets": {
+      "value": 217182.95,
+      "page_number": 1,
+      "source_text": "Other assets 217,182.95",
+      "confidence": 0.9249
+    },
+    "total_assets": {
+      "value": 4030194.26,
+      "page_number": 1,
+      "source_text": "Total 4,030,194.26",
+      "confidence": 0.9249
+    },
+    "contingent_liabilities": {
+      "value": 2344487.73,
+      "page_number": 1,
+      "source_text": "Contingent liabilities 2,344,487.73",
+      "confidence": 0.9249
+    },
+    "asset_components": [
+      {
+        "label": "Cash and balances with RBI",
+        "value": 178718.67
+      },
+      {
+        "label": "Balances with banks and money at call",
+        "value": 50115.84
+      },
+      {
+        "label": "Investments",
+        "value": 1005681.63
+      },
+      {
+        "label": "Advances",
+        "value": 2565891.41
+      },
+      {
+        "label": "Fixed assets",
+        "value": 12603.76
+      },
+      {
+        "label": "Other assets",
+        "value": 217182.95
+      }
+    ],
+    "liability_equity_components": [
+      {
+        "label": "Capital",
+        "value": 759.69
+      },
+      {
+        "label": "Employees stock options outstanding",
+        "value": 2652.72
+      },
+      {
+        "label": "Reserves and surplus",
+        "value": 452982.84
+      },
+      {
+        "label": "Minority interest",
+        "value": 13383.4
+      },
+      {
+        "label": "Deposits",
+        "value": 2376887.28
+      },
+      {
+        "label": "Borrowings",
+        "value": 730615.46
+      },
+      {
+        "label": "Other liabilities and provisions",
+        "value": 174832.07
+      },
+      {
+        "label": "Policyholders' funds",
+        "value": 278080.8
+      }
+    ],
+    "comparative_periods": [
+      {
+        "period_label": "As at March 31, 2023",
+        "data": {
+          "total_assets": 2530432.44,
+          "total_liabilities": 2240134.68,
+          "total_equity": 290297.76,
+          "asset_components": [
+            {
+              "label": "Cash and balances with RBI",
+              "value": 117189.28
+            },
+            {
+              "label": "Balances with banks and money at call",
+              "value": 79958.53
+            },
+            {
+              "label": "Investments",
+              "value": 511581.71
+            },
+            {
+              "label": "Advances",
+              "value": 1661949.29
+            },
+            {
+              "label": "Fixed assets",
+              "value": 8282.56
+            },
+            {
+              "label": "Other assets",
+              "value": 151322.28
+            },
+            {
+              "label": "Goodwill on consolidation",
+              "value": 148.79
+            }
+          ],
+          "liability_equity_components": [
+            {
+              "label": "Capital",
+              "value": 557.97
+            },
+            {
+              "label": "Employees stock options outstanding",
+              "value": 1117.2
+            },
+            {
+              "label": "Reserves and surplus",
+              "value": 287762.33
+            },
+            {
+              "label": "Minority interest",
+              "value": 860.26
+            },
+            {
+              "label": "Deposits",
+              "value": 1882663.25
+            },
+            {
+              "label": "Borrowings",
+              "value": 256548.66
+            },
+            {
+              "label": "Other liabilities and provisions",
+              "value": 100922.77
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "total_capital_liabilities_equals_assets",
+        "formula": "total_liabilities + total_equity ≈ total_assets",
+        "operands": {
+          "total_liabilities": 3560415.61,
+          "total_equity": 469778.65
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "asset_components_reconcile_to_total_assets",
+        "formula": "sum(asset_components.value) ≈ total_assets",
+        "operands": {
+          "component_count": 6
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "liability_equity_components_reconcile_to_total",
+        "formula": "sum(liability_equity_components.value) ≈ total_liabilities + total_equity",
+        "operands": {
+          "component_count": 8
+        },
+        "calculated_value": 4030194.26,
+        "reported_value": 4030194.26,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "current"
+      },
+      {
+        "name": "total_capital_liabilities_equals_assets",
+        "formula": "total_liabilities + total_equity ≈ total_assets",
+        "operands": {
+          "total_liabilities": 2240134.68,
+          "total_equity": 290297.76
+        },
+        "calculated_value": 2530432.44,
+        "reported_value": 2530432.44,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "As at March 31, 2023"
+      },
+      {
+        "name": "asset_components_reconcile_to_total_assets",
+        "formula": "sum(asset_components.value) ≈ total_assets",
+        "operands": {
+          "component_count": 7
+        },
+        "calculated_value": 2530432.44,
+        "reported_value": 2530432.44,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": "As at March 31, 2023"
+      },
+      {
+        "name": "liability_equity_components_reconcile_to_total",
+        "formula": "sum(liability_equity_components.value) ≈ total_liabilities + total_equity",
+        "operands": {
+          "component_count": 7
+        },
+        "calculated_value": 2530432.44,
+        "reported_value": 2530432.44,
+        "variance": -0.0,
+        "status": "PASS",
+        "period": "As at March 31, 2023"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-11T03:12:00Z",
+    "processing_time_ms": 5830,
+    "llm_model": "gemini-3.6-flash"
+  }
+}
