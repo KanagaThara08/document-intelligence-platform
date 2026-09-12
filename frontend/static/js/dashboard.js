@@ -77,7 +77,7 @@ async function processDocument() {
   formData.append("document_type", documentType);
 
   btn.disabled = true;
-  setStatus("Processing — this can take up to a minute for scanned documents.", "processing");
+  setStatus("Processing — this can take a few minutes for scanned documents. The table below updates automatically, so you don't need to refresh.", "processing");
 
   try {
     const res = await fetch(`${API_BASE}/documents/process`, { method: "POST", body: formData });
@@ -93,7 +93,11 @@ async function processDocument() {
       loadDocuments();
     }
   } catch (err) {
-    setStatus(`Request failed: ${String(err)}`, "error");
+    setStatus(
+      "Still working — this document is taking longer than the connection allowed. " +
+      "No need to resubmit: the table below refreshes automatically and will show the result once it's ready.",
+      "processing"
+    );
   } finally {
     btn.disabled = false;
   }
@@ -101,3 +105,4 @@ async function processDocument() {
 
 document.getElementById("processBtn").addEventListener("click", processDocument);
 loadDocuments();
+setInterval(loadDocuments, 8000);
